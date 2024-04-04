@@ -18,7 +18,8 @@ function downloaddata()
 
        Threads.@threads for x in lines
               V = map(String, split(x))
-              @suppress run(Cmd(V))
+              cd(lcpath*"/data/")
+              run(Cmd(V))
               next!(pr)
        end
        finish!(pr)
