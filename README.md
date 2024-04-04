@@ -11,4 +11,4 @@ downloaddata()
 create_stripe82_JLD2_file()
 ```
 
-The created JLD2 file can be made into a Julia artifact file using ArtifactUtils.jl.
+The created JLD2 file can be made into a Julia artifact file using [ArtifactUtils.jl](https://github.com/JuliaPackaging/ArtifactUtils.jl).
