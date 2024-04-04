@@ -12,7 +12,8 @@ module GPLVM_plus_dataset
     include("downloaddata.jl")
     include("loaddataasarrays.jl")
     include("loadstripe82dataset.jl")
+    include("create_stripe82_JLD2_file.jl")
 
     
-    export downloaddata, loadstripe82dataset
+    export downloaddata, loadstripe82dataset, create_stripe82_JLD2_file
 end
