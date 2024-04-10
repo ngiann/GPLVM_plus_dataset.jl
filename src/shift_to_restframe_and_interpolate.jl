@@ -25,7 +25,15 @@ function shift_to_restframe_and_interpolate(numgridpoints=1000)
 
     end
 
+    restframestd = map(zip(eachcol(stderr),Z)) do (s, z)
 
-    λgrid, restframespectra, files
+        idx = findall(x -> ~ismissing(x), s)
+
+        f = linear_interpolation(λoriginal[idx]/(z+1), s[idx], extrapolation_bc = Inf)
+
+        f(λgrid)
+
+    end
+    λgrid, restframespectra, restframestd, files
 
 end

@@ -1,6 +1,6 @@
 function preparedata_for_gplvm(numgridpoints=1000)
 
-    λgrid, restframespectra, files = shift_to_restframe_and_interpolate(numgridpoints)
+    λgrid, restframespectra, restframestd, files = shift_to_restframe_and_interpolate(numgridpoints)
    
     # sanity check
     
@@ -27,12 +27,12 @@ function preparedata_for_gplvm(numgridpoints=1000)
     for index in 1:size(tbl, 1)
 
         restframespectra[getindex(sdss_id[index])] /= area[index]
-
+        restframestd[getindex(sdss_id[index])] /= area[index]
     end
 
     newindices = map(i->getindex(sdss_id[i]), 1:size(tbl, 1))
 
     # re-order data so that data follow indices of entries in table
-    λgrid, restframespectra[newindices], sdss_id, area, scale_cont, power_cont
+    λgrid, restframespectra[newindices], restframestd[newindices], sdss_id, area, scale_cont, power_cont
 
 end
