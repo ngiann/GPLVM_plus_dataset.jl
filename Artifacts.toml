@@ -1,7 +1,0 @@
-[stripe82data]
-git-tree-sha1 = "f0079ea69fa31433344be8e7f8d38d154701817f"
-lazy = true
-
-    [[stripe82data.download]]
-    sha256 = "7ef38f265557dc9875bc6a8a9d8dc2663b7fc1d6f6e95115d610d4ec9d8826ed"
-    url = "https://www.dropbox.com/scl/fi/3o9ezukldp40tsi1cr0u7/stripe82dataset.tar.gz?rlkey=phs1g5g2vgt86mxv926qawllu&dl=0"
